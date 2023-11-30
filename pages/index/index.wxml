@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+  
+    <t-tab-bar value="{{value}}" bindchange="onChange" theme="tag" split="{{false}}">
+      <t-tab-bar-item wx:for="{{list}}" wx:key="index" value="{{item.value}}" icon="{{item.icon}}">
+        {{item.label}}
+      </t-tab-bar-item>
+    </t-tab-bar>
+  </view>
+</scroll-view>
