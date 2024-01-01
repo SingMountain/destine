@@ -34,7 +34,7 @@
     </view>
 
     <view class="{{classPrefix}}__description {{prefix}}-class-description">
-      <view wx:if="{{ description }}" class="{{classPrefix}}__description-text">{{description}}</view>
+      <view wx:if="{{ description }}" class="{{classPrefix}}__description-text"><text>{{description}}</text></view>
       <slot name="description" />
     </view>
   </view>

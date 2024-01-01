@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-navbar": "/miniprogram_npm/tdesign-miniprogram/navbar/navbar",
+    "time_select": "/cmpts/public/calendar/time_select/time_select_cmpt",
+		"date_select": "/cmpts/public/calendar/date_select/date_select_cmpt"
+  }
+}

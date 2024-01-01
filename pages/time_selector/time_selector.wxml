@@ -1,0 +1,18 @@
+<!--pages/time_selector/time_selector.wxml-->
+
+  <t-navbar class="block" title="预定时间" left-arrow bind:go-back="handleBack" />
+
+<view>
+<block wx:if="{{isLoad}}" >
+	<view style="width:100%; background-color: #fff; ">
+		<view class="date-fixed">
+			<date_select selected="{{day}}"></date_select>
+			<view >{{}}</view>
+		</view>
+		<view class="day-mask"></view>
+		<time_select day="{{day}}" startTimeStep="0" endTimeStep="48"  used="{{ used }}" bookedStartTime="2023-12-30 04:53" 
+    bookedEndTime="2023-12-30 05:53" bind:select="bindTimeSelect">
+		</time_select>
+	</view>
+</block>
+</view>

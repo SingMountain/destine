@@ -1,3 +1,22 @@
 {
-  "usingComponents": {}
+  "component": true,
+  "usingComponents": {
+    "t-search": "/miniprogram_npm/tdesign-miniprogram/search/search",
+    "t-radio-group": "/miniprogram_npm/tdesign-miniprogram/radio-group/radio-group",
+    "t-radio": "/miniprogram_npm/tdesign-miniprogram/radio/radio",
+    "t-icon": "/miniprogram_npm/tdesign-miniprogram/icon/icon",
+    "t-col": "/miniprogram_npm/tdesign-miniprogram/col/col",
+    "t-row": "/miniprogram_npm/tdesign-miniprogram/row/row",
+    "t-tag": "/miniprogram_npm/tdesign-miniprogram/tag/tag",
+    "t-check-tag": "/miniprogram_npm/tdesign-miniprogram/check-tag/check-tag",
+    "t-cell": "/miniprogram_npm/tdesign-miniprogram/cell/cell",
+    "t-switch": "/miniprogram_npm/tdesign-miniprogram/switch/switch",
+    "t-button": "/miniprogram_npm/tdesign-miniprogram/button/button",
+    "t-badge": "/miniprogram_npm/tdesign-miniprogram/badge/badge",
+    "wux-segmented-control": "/miniprogram_npm/wux-weapp/segmented-control/index",
+    "wux-date-picker-view": "/miniprogram_npm/wux-weapp/date-picker-view/index",
+    "wux-card": "/miniprogram_npm/wux-weapp/card/index",
+    "wux-wing-blank": "/miniprogram_npm/wux-weapp/wing-blank/index",
+    "wux-cascader-picker-view": "/miniprogram_npm/wux-weapp/cascader-picker-view/index"
+  }
 }

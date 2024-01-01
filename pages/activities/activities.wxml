@@ -1,2 +1,49 @@
 <!--pages/activities/activities.wxml-->
-<text>pages/activities/activities.wxml</text>
+<view class="head" style="width: 747rpx; height: 345rpx; display: flex; box-sizing: border-box">
+    <view class="example-search"  style="width: 633rpx; height: 274rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 36rpx">
+      <t-search model:value="{{searchValue}}" placeholder="搜索预设文案"></t-search>
+    </view>
+    <view class="activitiesAdd"  style="position: relative; top: 20rpx" >
+      <t-button bind:tap="createButton" theme="light"  icon="add-circle" shape="square" aria-label="搜索"></t-button>
+      <view style="font-size: 24rpx;">创建活动</view>
+    </view>
+</view>
+<view class="selectButton">
+  <view>时间</view>
+  <t-switch defaultValue="{{true}}" slot="note" bind:change="selectButtonOnChange"/>
+  <view>地点</view>
+</view>
+ 
+<view class="sub-title" wx:if="{{selectButton}}">
+    <wux-cascader-picker-view
+      value="{{ locationValue }}"
+      options="{{ options }}"
+      cols="2"
+      bind:valueChange="locationOnValueChange"
+    />
+  </view>
+
+<view wx:if="{{!selectButton}}">
+  <view class="sub-title"></view>
+    <wux-date-picker-view
+      mode="datetime"
+      value="{{ dateValue }}"
+      data-index="1"
+      bind:valueChange="dateOnValueChange"
+    />
+</view>
+<view wx:for="{{activitiesList}}" wx:key="index">
+  <t-cell title="研讨会" description="时间：{{displayValue1}}\n地点:{{displayValue}}" note="参会人员：60人" hover>
+    <t-switch defaultValue="{{true}}" slot="note"  style="margin-left: 20rpx;"/>
+  </t-cell>
+</view>
+
+
+
+
+
+
+
+
+
+

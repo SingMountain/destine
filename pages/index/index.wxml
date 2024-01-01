@@ -1,12 +1,31 @@
 <!--index.wxml-->
 <navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
-<scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-  
-    <t-tab-bar value="{{value}}" bindchange="onChange" theme="tag" split="{{false}}">
-      <t-tab-bar-item wx:for="{{list}}" wx:key="index" value="{{item.value}}" icon="{{item.icon}}">
-        {{item.label}}
-      </t-tab-bar-item>
-    </t-tab-bar>
+<view>
+<view class="head" style="width: 750rpx; height: 93rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
+  <view class="demo-wrapper" style="position: relative; left: 597rpx; top: -8rpx">
+    <t-badge count="2" offset="{{ [-2, -2] }}">
+      <t-icon name="notification" size="24" ariaLabel="通知" />
+    </t-badge>
   </view>
-</scroll-view>
+  <t-avatar icon="user" alt="avatar" />
+</view>
+<view class="body">
+ <image src="{{idQR}}" style="height: 500rpx;width: 500rpx;"></image>
+ <t-button theme="light" size="small" >请扫身份码参加会议</t-button>
+</view>
+<view style="margin-top:50rpx;">会议通知：</view>
+<scroll-view scroll-y="true"  style="height: 500rpx;">
+<view wx:for="{{activitiesList}}" wx:key="index">
+  <t-cell title="{{item.resComment}}" note="开始时间:{{item.startTime}} \n地点:{{item.locationName}}"  hover>
+  </t-cell>
+</view>
+</scroll-view> 
+<t-notice-bar visible="{{noticeBar_visible}}" prefixIcon="{{false}}" content="13号6点实验楼将停水">
+  <view slot="prefix-icon">
+    <t-icon name="error-circle-filled"></t-icon>
+  </view>
+</t-notice-bar>
+</view>
+
+    
+

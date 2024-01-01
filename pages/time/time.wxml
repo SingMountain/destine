@@ -1,0 +1,64 @@
+<!--pages/time/time.wxml-->
+<view>
+<view class="calendar" >
+  <cmpt-calendar mode="one" hasDays="{{hasDays}}" bind:click="bindClickCmpt" bind:monthChange="bindMonthChangeCmpt" />
+</view>
+</view>
+<t-cell
+  title="开始时间"
+  hover
+  arrow
+  id="1"
+  data-mode="minute"
+  bindtap="showPicker"
+  t-class="panel-item"
+  note="{{time1}}"
+/>
+
+<t-cell
+  title="结束时间"
+  id="2"
+  hover
+  arrow
+  data-mode="minute"
+  bindtap="showPicker"
+  t-class="panel-item"
+  note="{{time2}}"
+/>
+
+<!-- 时分 -->
+<t-date-time-picker
+  title="选择时间"
+  visible="{{minuteVisible}}"
+  mode="{{['null', 'minute']}}"
+  value="{{minute}}"
+  format="HH:mm"
+  bindchange="onConfirm"
+  bindpick="onColumnChange"
+  bindcancel="hidePicker"
+/>
+<view style="margin-top: 50rpx;"> 可预约的会议室：</view>
+<view class="main">
+			<view class="list">
+				<view class="item" wx:for="{{activitiesList}}" wx:key="key" bind:tap="bindClickList" data-id="{{index}}">
+					<view class="top-line">
+						<view class="left">
+							<view class="title">
+								<view class="img-round margin-right-xs" />
+								<view class="txt content-cut-one">{{item.name}}</view>
+							</view>
+							<view class="tag-list">
+								<view wx:for="{{item.locationDetailsList}}" wx:key="key">
+                  <t-tag class="margin-16" variant="outline" theme="primary" style="margin-left: 20rpx;">{{item.facilityName}}</t-tag>
+                </view>
+							</view>
+						</view>
+					</view>
+					<view class="bottom-line" catch:tap="onTapBooking">
+						<view class="num" style="display: flex;align-items: center;"><image src="/images/humans.png" style="width: 40rpx;height: 40rpx;"></image>{{item.capacity}}人</view>
+						<view class="order" >预定</view>
+					</view>
+				</view>
+			</view> 
+
+</view>

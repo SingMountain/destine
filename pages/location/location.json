@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-tabs": "/miniprogram_npm/tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "/miniprogram_npm/tdesign-miniprogram/tab-panel/tab-panel",
+		"time_select": "/cmpts/public/calendar/time_select/time_select_cmpt",
+		"date_select": "/cmpts/public/calendar/date_select/date_select_cmpt"
+  }
+}

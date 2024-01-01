@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "tdesign-miniprogram": "^1.2.4"
+    "tdesign-miniprogram": "^1.2.4",
+    "wux-weapp": "^3.10.1"
   }
 }

@@ -1,2 +1,13 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="my">
+<t-cell title="李四" description="编辑个人信息" hover arrow >
+  <view class="avatar" slot="left-icon">
+    <open-data type="userAvatarUrl" />
+  </view>
+</t-cell>
+<t-cell-group theme="card">
+  <t-cell title="单行标题" leftIcon="service" hover arrow />
+  <t-cell title="单行标题" leftIcon="internet" hover arrow />
+  <t-cell title="单行标题" leftIcon="lock-on" hover arrow />
+</t-cell-group>
+</view>

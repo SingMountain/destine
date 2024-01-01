@@ -1,0 +1,22 @@
+<view style="margin-top: 150rpx;">
+<t-tabs defaultValue="{{0}}" space-evenly="{{false}}" bind:click="onTabsClick">
+  <t-tab-panel wx:for="{{buldings}}" wx:key="index" label="{{item}}" value="{{index}}" />
+</t-tabs>
+<t-tabs defaultValue="{{0}}" space-evenly="{{false}}"  bind:click="">
+  <t-tab-panel wx:for="{{rooms}}" wx:key="index" label="{{item}}" value="{{index}}" />
+</t-tabs>
+<block wx:if="{{isLoad}}" >
+	<view style="width:100%; margin-top: 50rpx; background-color: #fff; ">
+		<view class="date-fixed">
+			<date_select selected="{{day}}"></date_select>
+			<view class="day-title text-cut">{{}}</view>
+		</view>
+		<view class="day-mask"></view>
+    <time_select day="{{day}}" startTimeStep="0" endTimeStep="48"  used="{{ used }}" bookedStartTime="2023-12-30 04:53" 
+    bookedEndTime="2023-12-30 05:53" bind:select="bindTimeSelect">
+		</time_select>
+	</view>
+</block>
+</view>
+
+
